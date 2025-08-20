@@ -72,4 +72,9 @@
   .animate-fadeIn {
     animation: fadeIn 0.3s ease-out;
   }
+
+  /* Tooltip improvements */
+  .group:hover .group-hover\:visible {
+    animation: fadeIn 0.2s ease-out;
+  }
 }

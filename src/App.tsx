@@ -261,7 +261,15 @@ export default function UkrainianStreamersDirectory() {
                     </div>
                   </div>
 
-                  <p className="mt-3 text-sm text-slate-700 line-clamp-3 h-[60px] leading-5">{s.description}</p>
+                  <p 
+                    className="mt-3 text-sm text-slate-700 line-clamp-3 h-[60px] leading-5 cursor-help relative group"
+                    title={s.description}
+                  >
+                    {s.description}
+                    <span className="invisible group-hover:visible absolute left-0 top-full mt-2 w-80 max-w-sm p-3 bg-slate-900 text-white text-xs rounded-lg shadow-lg z-10 border border-slate-700">
+                      {s.description}
+                    </span>
+                  </p>
 
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {s.tags.map((t) => (
