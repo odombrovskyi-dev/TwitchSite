@@ -11,7 +11,6 @@ import { Button } from "./components/ui/button";
 // -----------------------------------------------------------------------------
 
 // Utility to build a safe image URL with fallback
-const twitchAvatar = (handle: string) => `https://unavatar.io/twitch/${encodeURIComponent(handle)}`;
 const fallbackAvatar = (name: string) =>
   `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&radius=50&backgroundType=gradientLinear`;
 
