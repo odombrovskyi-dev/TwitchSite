@@ -57,6 +57,21 @@
     overflow: hidden;
     line-clamp: 3;
   }
+
+  .line-clamp-3:hover {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    line-clamp: unset;
+  }
+
+  .line-clamp-none {
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: visible;
+    line-clamp: unset;
+  }
   
   @keyframes fadeIn {
     from {
@@ -73,8 +88,21 @@
     animation: fadeIn 0.3s ease-out;
   }
 
-  /* Tooltip improvements */
-  .group:hover .group-hover\:visible {
-    animation: fadeIn 0.2s ease-out;
+  /* Custom scrollbar for description hover */
+  .hover\:overflow-y-auto:hover::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .hover\:overflow-y-auto:hover::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .hover\:overflow-y-auto:hover::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.5);
+    border-radius: 2px;
+  }
+  
+  .hover\:overflow-y-auto:hover::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.8);
   }
 }
