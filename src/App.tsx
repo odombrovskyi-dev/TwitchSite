@@ -29,7 +29,7 @@ const STREAMERS: Streamer[] = [
     tags: ["IRL", "Just Chatting", "CS2"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/8f2c9f02-17d4-4269-a629-00a72b1369c0-profile_image-70x70.png",
     description:
-      "Ukrainian IRL and Just Chatting star; watch parties and CS2 moments with high-energy community.",
+      "Українська зірка IRL та Just Chatting; перегляди трансляцій та моменти з CS2 з енергійною спільнотою.",
   },
   {
     name: "thetremba",
@@ -37,7 +37,7 @@ const STREAMERS: Streamer[] = [
     tags: ["IRL", "Just Chatting", "Variety"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png",
     description:
-      "Comedic IRL and Just Chatting streams, travel vlogs, and collabs across the Ukrainian scene.",
+      "Комедійні IRL та Just Chatting стріми, тревел-влоги та колаби в українській спільноті.",
   },
   {
     name: "Ghostik",
@@ -45,7 +45,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Dota 2", "Esports", "Charity"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/7dce1356-3943-41c9-bc9f-e5922756a1e3-profile_image-70x70.png",
     description:
-      "Ex‑pro Dota 2 (TI Top‑8). Streams Dota, hosts charity drives, and chats with the community.",
+      "Екс-про гравець у Dota 2 (TI Top-8). Стрімить Dota, проводить благодійні збори та спілкується зі спільнотою.",
   },
   {
     name: "Dobra_Divka",
@@ -53,7 +53,7 @@ const STREAMERS: Streamer[] = [
     tags: ["PUBG", "Variety", "Just Chatting"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/848a2696-f924-4baf-a872-e39a105602a5-profile_image-70x70.png",
     description:
-      "Popular Ukrainian creator known for PUBG and variety streams with a welcoming vibe.",
+      "Популярна українська стрімерка, відома завдяки PUBG та різноманітним стрімам із дружньою атмосферою.",
   },
   {
     name: "luma_rum",
@@ -61,7 +61,7 @@ const STREAMERS: Streamer[] = [
     tags: ["VTuber", "Cozy", "Variety"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/f9d30272-6dac-4fd7-b5cc-75af355fe347-profile_image-70x70.png",
     description:
-      "Ukrainian VTuber focusing on cozy variety streams and community events.",
+      "Українська VTuber, яка зосереджується на затишних різноманітних стрімах та подіях для спільноти.",
   },
   {
     name: "Leniniw",
@@ -69,7 +69,7 @@ const STREAMERS: Streamer[] = [
     tags: ["CS2", "Analysis", "Esports"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/1385a9e7-b817-4aaa-b4c8-f07b4fce99af-profile_image-70x70.png",
     description:
-      "Counter‑Strike streams, analysis, and community watch‑alongs in Ukrainian.",
+      "Стріми Counter-Strike, аналітика та спільні перегляди турнірів українською.",
   },
   {
     name: "ceh9",
@@ -77,7 +77,7 @@ const STREAMERS: Streamer[] = [
     tags: ["CS", "Esports", "Talk"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/b9762920-b057-49b2-8287-5f0b0ffa1b61-profile_image-70x70.png",
     description:
-      "Former CS pro sharing gameplay, stories from the scene, and talk‑style streams.",
+      "Колишній професійний гравець у CS, ділиться геймплеєм, історіями зі сцени та проводить розмовні стріми.",
   },
   {
     name: "Solodana",
@@ -85,15 +85,15 @@ const STREAMERS: Streamer[] = [
     tags: ["Valorant", "Variety"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/7ae35270-113a-494d-b055-b2cc7cede917-profile_image-70x70.png",
     description:
-      "Shooter‑focused creator (Valorant) with occasional variety.",
+      "Креаторка, що зосереджується на шутерах (Valorant) та іноді проводить різнопланові стріми.",
   },
   {
-    name: "MrLABR",
-    handle: "mrlabr",
-    tags: ["Shooters", "Variety", "Just Chatting"],
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/44d157fe-11df-409b-85f7-31d815cf6671-profile_image-70x70.png",
+    name: "roolex9",
+    handle: "roolex9",
+    tags: ["Just Chatting", "PUBG", "Elden Ring", "Mafia"],
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/5cb5663b-23e2-4abf-adc9-c4c748565997-profile_image-70x70.jpg",
     description:
-      "FPS‑leaning variety with chatty, community‑driven streams.",
+      "Переважно стрімить Just Chatting із різноманітними іграми — PUBG, Elden Ring та сюжетними іграми на кшталт Mafia.",
   },
   {
     name: "Skevich_",
@@ -101,7 +101,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Variety", "Clips", "Chat"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/81b714c5-7952-46ef-bf7c-f1d7a20022b1-profile_image-70x70.png",
     description:
-      "Variety content, clips, and chat‑first streams in Ukrainian.",
+      "Різноплановий контент, кліпи та спілкування з чатом українською мовою.",
   },
   {
     name: "Pragen_UA",
@@ -109,7 +109,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Variety", "Just Chatting"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/991f5a4f-2992-4434-b94b-7a0eac24ccba-profile_image-70x70.png",
     description:
-      "Variety and Just Chatting with a focus on Ukrainian community culture.",
+      "Різноманітні стріми та Just Chatting з акцентом на українську культуру спільноти.",
   },
   {
     name: "TaiTake",
@@ -117,7 +117,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Variety", "IRL"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/b0f04cc8-283a-4494-acf9-034f28272cea-profile_image-70x70.png",
     description:
-      "Early Ukrainian‑language variety/IRL streamer; community‑centric content.",
+      "Один із перших україномовних різнопланових/IRL стрімерів; контент, зосереджений на спільноті.",
   },
   {
     name: "ivonyak",
@@ -125,7 +125,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Variety", "Talk"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/9f6ca44a-6445-4445-a469-73919586abc2-profile_image-70x70.png",
     description:
-      "Variety and conversational streams with topical discussions.",
+      "Різнопланові та розмовні стріми з обговоренням актуальних тем.",
   },
   {
     name: "Kolento",
@@ -133,7 +133,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Hearthstone", "Card Games"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/kolento-profile_image-b750c756ada12684-70x70.jpeg",
     description:
-      "Legendary Hearthstone player from Ukraine; strategy, arena runs, and card game variety.",
+      "Легендарний гравець у Hearthstone з України; стратегія, арена та різні карткові ігри.",
   },
   {
     name: "OTOYSOUNDS",
@@ -141,7 +141,7 @@ const STREAMERS: Streamer[] = [
     tags: ["Music", "Beatmaking", "IRL"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/4612231e-dcb5-42d1-951f-d5aba17d6669-profile_image-70x70.png",
     description:
-      "Music production and beatmaking sessions, plus IRL collabs with Ukrainian creators.",
+      "Сесії з музичного продакшену та створення бітів, а також IRL-колаби з українськими креаторами.",
   },
   {
     name: "PotatooElf",
@@ -149,9 +149,10 @@ const STREAMERS: Streamer[] = [
     tags: ["Variety", "Cozy"],
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/44e1c0f5-5ab0-49c6-b829-9420170cda24-profile_image-70x70.png",
     description:
-      "Comfy variety streams, artful vibes, and chat‑driven segments.",
+      "Затишні різнопланові стріми, творча атмосфера та спілкування з чатом.",
   },
 ];
+
 
 const TAGS = Array.from(
   STREAMERS.reduce((s, x) => {
@@ -188,8 +189,8 @@ export default function UkrainianStreamersDirectory() {
       <div className="mx-auto max-w-7xl">
         <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h1 className="text-3xl font-bold">Ukrainian Twitch Streamers</h1>
-            <p className="text-slate-600">Only person streamers. Search, filter, and click through to Twitch profiles.</p>
+            <h1 className="text-3xl font-bold">Українські Twitch стрімери</h1>
+            <p className="text-slate-600">Шукайте, фільтруйте та переходьте до профілів Twitch.</p>
           </div>
           <div className="flex gap-2 w-full sm:w-auto">
             <div className="relative w-full sm:w-80">
@@ -197,7 +198,7 @@ export default function UkrainianStreamersDirectory() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <Input
-                placeholder="Search by name, tag, or description"
+                placeholder="Пошук стрімерів..."
                 className="pl-9"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -211,7 +212,7 @@ export default function UkrainianStreamersDirectory() {
             <svg className="h-4 w-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
             </svg>
-            <span className="text-sm text-slate-600">Filter by tags</span>
+            <span className="text-sm text-slate-600">Фільтрувати за тегами</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {TAGS.map((tag) => (
@@ -276,7 +277,7 @@ export default function UkrainianStreamersDirectory() {
                         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        View on Twitch
+                        Дивитися на Twitch
                       </Button>
                     </a>
                   </div>
@@ -286,7 +287,7 @@ export default function UkrainianStreamersDirectory() {
           ))}
         </main>
 
-        <footer className="mt-10 text-xs text-slate-500">Made with ❤️ by Copilot.</footer>
+        <footer className="mt-10 text-xs text-slate-500">Зроблено з ❤️ за допомогою Copilot, 2025</footer>
       </div>
     </div>
   );
