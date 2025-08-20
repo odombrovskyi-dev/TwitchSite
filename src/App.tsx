@@ -286,11 +286,7 @@ export default function UkrainianStreamersDirectory() {
           ))}
         </main>
 
-        <footer className="mt-10 text-xs text-slate-500">
-          <p>
-            Tip: Add more entries to the <code>STREAMERS</code> array. Avatars are fetched from Twitch via unavatar.io; a fallback initials avatar is used if unavailable.
-          </p>
-        </footer>
+        <footer className="mt-10 text-xs text-slate-500">Made with ❤️ by Copilot.</footer>
       </div>
     </div>
   );
