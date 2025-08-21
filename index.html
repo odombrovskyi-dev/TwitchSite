@@ -1,27 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) - Only load in production -->
-    <script>
-      // Only load Google Analytics in production (not localhost)
-      if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-        // Load gtag script
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TNX797RKF7';
-        document.head.appendChild(script);
-        
-        // Initialize gtag
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TNX797RKF7');
-        
-        console.log('Google Analytics loaded');
-      } else {
-        console.log('Google Analytics disabled (localhost)');
-      }
-    </script>
     <meta charset="UTF-8" />
     
     <!-- Favicon and Icons -->
