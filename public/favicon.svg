@@ -1,11 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
-  <!-- Clean background circle with Ukrainian blue -->
-  <circle cx="90" cy="90" r="85" fill="#0057B7" stroke="#ffffff" stroke-width="5"/>
+  <!-- Background circle with gradient -->
+  <defs>
+    <radialGradient id="worldGradient" cx="0.3" cy="0.3" r="0.8">
+      <stop offset="0%" stop-color="#4A90E2"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </radialGradient>
+    <linearGradient id="playGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+  </defs>
   
-  <!-- Clean play button/stream icon -->
-  <polygon points="65,50 65,130 125,90" fill="#FFD700"/>
+  <!-- Main globe background -->
+  <circle cx="90" cy="90" r="85" fill="url(#worldGradient)" stroke="#ffffff" stroke-width="3"/>
   
-  <!-- Clean accent dots -->
-  <circle cx="45" cy="45" r="6" fill="#FFD700"/>
-  <circle cx="135" cy="135" r="4" fill="#FFD700" opacity="0.8"/>
+  <!-- Globe continents/landmasses -->
+  <path d="M45 60 Q60 50 80 55 Q100 60 110 75 Q105 90 95 100 Q80 105 65 95 Q50 85 45 70 Z" fill="#34D399" opacity="0.8"/>
+  <path d="M110 45 Q130 50 140 70 Q135 85 125 95 Q115 90 110 75 Q112 60 110 45 Z" fill="#34D399" opacity="0.8"/>
+  <path d="M50 110 Q70 105 85 115 Q90 130 75 140 Q60 135 50 125 Q48 118 50 110 Z" fill="#34D399" opacity="0.8"/>
+  
+  <!-- Streaming play button overlay -->
+  <circle cx="90" cy="90" r="35" fill="rgba(0,0,0,0.2)"/>
+  <polygon points="78,70 78,110 108,90" fill="url(#playGradient)" stroke="#ffffff" stroke-width="1"/>
+  
+  <!-- Global connection dots -->
+  <circle cx="65" cy="50" r="3" fill="#FFD700"/>
+  <circle cx="125" cy="65" r="3" fill="#FFD700"/>
+  <circle cx="115" cy="125" r="3" fill="#FFD700"/>
+  <circle cx="55" cy="120" r="3" fill="#FFD700"/>
+  
+  <!-- Connection lines (subtle) -->
+  <path d="M65 50 Q90 40 125 65" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M125 65 Q130 95 115 125" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M115 125 Q85 135 55 120" stroke="#FFD700" stroke-width="1" fill="none" opacity="0.6"/>
 </svg>
