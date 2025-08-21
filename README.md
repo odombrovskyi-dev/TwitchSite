@@ -1,8 +1,8 @@
 [![Deploy to GitHub Pages](https://github.com/odombrovskyi-dev/TwitchSite/actions/workflows/deploy.yml/badge.svg)](https://github.com/odombrovskyi-dev/TwitchSite/actions/workflows/deploy.yml)
 
-# Ukrainian Twitch Streamers Directory
+# Twitch Streamers Directory
 
-A modern React application showcasing Ukrainian Twitch streamers with search and filtering capabilities.
+A modern React application showcasing Twitch streamers with search and filtering capabilities.
 
 ## Features
 

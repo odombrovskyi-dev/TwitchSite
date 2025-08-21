@@ -1,7 +1,7 @@
 {
-  "name": "Ukrainian Twitch Streamers Directory",
-  "short_name": "UA Streamers",
-  "description": "Discover Ukrainian Twitch streamers - search, filter, and explore the vibrant Ukrainian streaming community",
+  "name": "Twitch Streamers Directory",
+  "short_name": "TTV Streamers",
+  "description": "Discover Twitch streamers - search, filter, and explore the vibrant streaming community",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

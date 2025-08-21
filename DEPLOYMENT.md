@@ -1,6 +1,6 @@
 # GitHub Pages Deployment Setup
 
-This guide will help you deploy your Ukrainian Twitch Streamers directory to GitHub Pages.
+This guide will help you deploy your Twitch Streamers directory to GitHub Pages.
 
 ## 🚀 Setup Instructions
 
@@ -17,7 +17,7 @@ This guide will help you deploy your Ukrainian Twitch Streamers directory to Git
    ```bash
    git init
    git add .
-   git commit -m "Initial commit: Ukrainian Twitch Streamers directory"
+   git commit -m "Initial commit: Twitch Streamers directory"
    git branch -M main
    git remote add origin https://github.com/YOUR_USERNAME/TwitchSite.git
    git push -u origin main
@@ -108,7 +108,7 @@ After the initial setup, updating is simple:
 
 ## 🎉 Success!
 
-Once deployed, your Ukrainian Twitch Streamers directory will be live and accessible to everyone at:
+Once deployed, your Twitch Streamers directory will be live and accessible to everyone at:
 `https://YOUR_USERNAME.github.io/TwitchSite/`
 
 The site will automatically update every time you push changes to the main branch!

@@ -46,13 +46,112 @@ const STREAMERS: Streamer[] = [
       "Ukrainian IRL and Just Chatting star; watch parties and CS2 moments with high-energy community.",
   },
   {
+    name: "thetremba",
+    handle: "thetremba",
+    tags: ["IRL", "Just Chatting", "Variety"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/09213338-43a2-415f-af60-2cfbbe770d2b-profile_image-70x70.png",
+    description:
+      "Comedic IRL and Just Chatting streams, travel vlogs, and collabs across the Ukrainian scene.",
+  },
+  {
     name: "Ghostik",
     handle: "ghostik",
     tags: ["Dota 2", "Esports", "Charity"],
     country: "Ukraine",
     avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/7dce1356-3943-41c9-bc9f-e5922756a1e3-profile_image-70x70.png",
     description:
-      "Ex-pro Dota 2 player (TI Top-8). Streams Dota, hosts charity drives, and chats with the community.",
+      "Ex‑pro Dota 2 (TI Top‑8). Streams Dota, hosts charity drives, and chats with the community.",
+  },
+  {
+    name: "Dobra_Divka",
+    handle: "dobra_divka",
+    tags: ["PUBG", "Variety", "Just Chatting"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/848a2696-f924-4baf-a872-e39a105602a5-profile_image-70x70.png",
+    description:
+      "Popular Ukrainian creator known for PUBG and variety streams with a welcoming vibe.",
+  },
+  {
+    name: "luma_rum",
+    handle: "luma_rum",
+    tags: ["VTuber", "Cozy", "Variety"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/f9d30272-6dac-4fd7-b5cc-75af355fe347-profile_image-70x70.png",
+    description:
+      "Ukrainian VTuber focusing on cozy variety streams and community events.",
+  },
+  {
+    name: "Leniniw",
+    handle: "leniniw",
+    tags: ["CS2", "Analysis", "Esports"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/1385a9e7-b817-4aaa-b4c8-f07b4fce99af-profile_image-70x70.png",
+    description:
+      "Counter‑Strike streams, analysis, and community watch‑alongs in Ukrainian.",
+  },
+  {
+    name: "ceh9",
+    handle: "ceh9",
+    tags: ["CS", "Esports", "Talk"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/b9762920-b057-49b2-8287-5f0b0ffa1b61-profile_image-70x70.png",
+    description:
+      "Former CS pro sharing gameplay, stories from the scene, and talk‑style streams.",
+  },
+  {
+    name: "Solodana",
+    handle: "solodana",
+    tags: ["Valorant", "Variety"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/7ae35270-113a-494d-b055-b2cc7cede917-profile_image-70x70.png",
+    description:
+      "Shooter‑focused creator (Valorant) with occasional variety.",
+  },
+  {
+    name: "MrLABR",
+    handle: "mrlabr",
+    tags: ["Shooters", "Variety", "Just Chatting"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/44d157fe-11df-409b-85f7-31d815cf6671-profile_image-70x70.png",
+    description:
+      "FPS‑leaning variety with chatty, community‑driven streams.",
+  },
+  {
+    name: "Skevich_",
+    handle: "skevich_",
+    tags: ["Variety", "Clips", "Chat"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/81b714c5-7952-46ef-bf7c-f1d7a20022b1-profile_image-70x70.png",
+    description:
+      "Variety content, clips, and chat‑first streams in Ukrainian.",
+  },
+  {
+    name: "Pragen_UA",
+    handle: "pragen_ua",
+    tags: ["Variety", "Just Chatting"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/991f5a4f-2992-4434-b94b-7a0eac24ccba-profile_image-70x70.png",
+    description:
+      "Variety and Just Chatting with a focus on Ukrainian community culture.",
+  },
+  {
+    name: "TaiTake",
+    handle: "taitake",
+    tags: ["Variety", "IRL"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/b0f04cc8-283a-4494-acf9-034f28272cea-profile_image-70x70.png",
+    description:
+      "Early Ukrainian‑language variety/IRL streamer; community‑centric content.",
+  },
+  {
+    name: "ivonyak",
+    handle: "ivonyak",
+    tags: ["Variety", "Talk"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/9f6ca44a-6445-4445-a469-73919586abc2-profile_image-70x70.png",
+    description:
+      "Variety and conversational streams with topical discussions.",
   },
   {
     name: "Kolento",
@@ -63,7 +162,24 @@ const STREAMERS: Streamer[] = [
     description:
       "Legendary Hearthstone player from Ukraine; strategy, arena runs, and card game variety.",
   },
-  
+  {
+    name: "OTOYSOUNDS",
+    handle: "otoysounds",
+    tags: ["Music", "Beatmaking", "IRL"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/4612231e-dcb5-42d1-951f-d5aba17d6669-profile_image-70x70.png",
+    description:
+      "Music production and beatmaking sessions, plus IRL collabs with Ukrainian creators.",
+  },
+  {
+    name: "PotatooElf",
+    handle: "potatooelf",
+    tags: ["Variety", "Cozy"],
+    country: "Ukraine",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/44e1c0f5-5ab0-49c6-b829-9420170cda24-profile_image-70x70.png",
+    description:
+      "Comfy variety streams, artful vibes, and chat‑driven segments.",
+  },
   // Spanish Streamers
   {
     name: "TheGrefg",
@@ -237,7 +353,7 @@ const STREAMERS: Streamer[] = [
 ];
 
 
-export default function UkrainianStreamersDirectory() {
+export default function StreamersDirectory() {
   const [query, setQuery] = useState("");
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [activeCountries, setActiveCountries] = useState<string[]>([]);
