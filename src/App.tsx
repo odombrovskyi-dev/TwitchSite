@@ -391,16 +391,29 @@ export default function StreamersDirectory() {
     <>
       {/* SEO Meta Tags for React */}
       <div style={{ display: 'none' }}>
-        <h1>Global Twitch Streamers Directory</h1>
-        <p>Discover the best Twitch streamers from around the world including gaming, IRL, esports, and variety content creators. Search and filter through international streaming community.</p>
+        <h1>Global Twitch Streamers Directory - Discover International Content Creators</h1>
+        <h2>Find the Best Streamers from Around the World</h2>
+        <p>Discover the best Twitch streamers from around the world including gaming, IRL, esports, VTubers, and variety content creators. Search and filter through our comprehensive international streaming community directory featuring creators from Ukraine, Spain, Germany, France, Brazil, Japan, South Korea, Sweden, USA, Canada, and the United Kingdom.</p>
+        <p>Our global directory includes popular streamers like Leb1ga, Ghostik, TheGrefg, ElRubius, MontanaBlack88, Kameto, Cellbit, Gaules, Kuzuha, Faker, Shroud, Pokimane, and many more international content creators.</p>
+        <ul>
+          <li>Gaming streamers from every continent</li>
+          <li>VTubers and virtual content creators</li>
+          <li>Esports professionals and pro gamers</li>
+          <li>IRL and Just Chatting streamers</li>
+          <li>Variety content creators</li>
+          <li>International streaming community</li>
+        </ul>
+        <p>Filter by tags: Gaming, Esports, VTuber, Just Chatting, IRL, Variety, CS2, Dota 2, League of Legends, Minecraft, Valorant, Entertainment, and more.</p>
+        <p>Browse by countries: Ukraine, Spain, Germany, France, Brazil, Japan, South Korea, Sweden, Canada, USA, United Kingdom, and other nations.</p>
       </div>
       
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800 p-6">
         <div className="mx-auto max-w-7xl">
-          <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h1 className="text-3xl font-bold">Global Streamers 🌍</h1>
-              <p className="text-slate-600">Discover amazing streamers from around the world. Search, filter, and explore diverse content creators.</p>
+          <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between" role="banner">
+            <div itemScope itemType="https://schema.org/WebSite">
+              <h1 className="text-3xl font-bold" itemProp="name">Global Streamers 🌍</h1>
+              <p className="text-slate-600" itemProp="description">Discover amazing streamers from around the world. Search, filter, and explore diverse content creators.</p>
+              <meta itemProp="url" content="https://the-streamers.com/" />
             </div>
             <div className="flex gap-2 w-full sm:w-auto">
               <div className="relative w-full sm:w-80">
@@ -494,6 +507,13 @@ export default function StreamersDirectory() {
                 itemScope
                 itemType="https://schema.org/Person"
               >
+              <meta itemProp="jobTitle" content="Content Creator" />
+              <meta itemProp="nationality" content={s.country} />
+              <meta itemProp="url" content={`https://twitch.tv/${s.handle}`} />
+              <meta itemProp="sameAs" content={`https://twitch.tv/${s.handle}`} />
+              <div itemProp="mainEntityOfPage" itemScope itemType="https://schema.org/WebPage">
+                <meta itemProp="url" content={`https://twitch.tv/${s.handle}`} />
+              </div>
               <Card className="rounded-2xl shadow-sm hover:shadow-md transition">
                 <CardContent className="p-4">
                   <div className="flex items-center gap-3">
@@ -531,9 +551,10 @@ export default function StreamersDirectory() {
                     </p>
                   </div>
 
-                  <div className="mt-3 flex flex-wrap gap-1.5">
+                  <div className="mt-3 flex flex-wrap gap-1.5" itemProp="keywords">
                     {s.tags.map((t) => (
-                      <span key={t} className="text-[11px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                      <span key={t} className="text-[11px] px-2 py-0.5 rounded-full bg-slate-100 text-slate-700" itemProp="about" itemScope itemType="https://schema.org/Thing">
+                        <meta itemProp="name" content={t} />
                         {t}
                       </span>
                     ))}
