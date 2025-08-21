@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .preview {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            display: inline-block;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        button {
+            background: #9146FF;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #7c2fd1;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Global Streamers Directory - OG Image</h1>
+        <p>Preview of your Open Graph image (1200x630px):</p>
+        
+        <div class="preview">
+            <img src="og-image.svg" width="1200" height="630" alt="Global Streamers Directory OG Image" id="ogImage">
+        </div>
+        
+        <div>
+            <button onclick="downloadAsSVG()">Download SVG</button>
+            <button onclick="convertToJPG()">Convert to JPG</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li><strong>Automatic Conversion:</strong> Click "Convert to JPG" to download as JPG file</li>
+                <li><strong>Manual Conversion:</strong> 
+                    <ul>
+                        <li>Right-click the image above → "Save image as" → Save as PNG</li>
+                        <li>Use any image editor to convert PNG to JPG</li>
+                        <li>Or use online converters like <code>convertio.co</code> or <code>cloudconvert.com</code></li>
+                    </ul>
+                </li>
+                <li><strong>Final Step:</strong> Rename the file to <code>og-image.jpg</code> and place it in your <code>public/</code> folder</li>
+            </ol>
+            
+            <h3>🎨 Design Features:</h3>
+            <ul>
+                <li>✅ Twitch brand colors (#9146FF, #0E0E23)</li>
+                <li>✅ Global theme with world map illustration</li>
+                <li>✅ "Global Streamers 🌍 Directory" title</li>
+                <li>✅ Country flag colors representing international community</li>
+                <li>✅ Twitch play button and streaming elements</li>
+                <li>✅ Professional gradient background</li>
+                <li>✅ Perfect 1200x630px dimensions for social media</li>
+            </ul>
+            
+            <h3>🔧 Usage:</h3>
+            <p>This image will be used when your site is shared on:</p>
+            <ul>
+                <li>📘 Facebook</li>
+                <li>🐦 Twitter</li>
+                <li>💼 LinkedIn</li>
+                <li>💬 Discord</li>
+                <li>📱 WhatsApp</li>
+                <li>🔍 Google Search previews</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function downloadAsSVG() {
+            const svgData = document.querySelector('img[src="og-image.svg"]').src;
+            const link = document.createElement('a');
+            link.href = svgData;
+            link.download = 'og-image.svg';
+            link.click();
+        }
+        
+        function convertToJPG() {
+            const img = document.getElementById('ogImage');
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = 1200;
+            canvas.height = 630;
+            
+            // Create a new image element to load the SVG
+            const tempImg = new Image();
+            tempImg.onload = function() {
+                // Fill white background
+                ctx.fillStyle = '#FFFFFF';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw the SVG
+                ctx.drawImage(tempImg, 0, 0, 1200, 630);
+                
+                // Convert to JPG and download
+                canvas.toBlob(function(blob) {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = 'og-image.jpg';
+                    link.click();
+                }, 'image/jpeg', 0.95);
+            };
+            
+            // Convert SVG to data URL
+            fetch('og-image.svg')
+                .then(response => response.text())
+                .then(svgText => {
+                    const svgBlob = new Blob([svgText], {type: 'image/svg+xml'});
+                    tempImg.src = URL.createObjectURL(svgBlob);
+                })
+                .catch(err => {
+                    alert('Please use manual conversion method or ensure the SVG file is accessible.');
+                    console.error('Conversion error:', err);
+                });
+        }
+        
+        // Show dimensions info
+        console.log('🎨 OG Image Dimensions: 1200x630px (Perfect for social media!)');
+    </script>
+</body>
+</html>

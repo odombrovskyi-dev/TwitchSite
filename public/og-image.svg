@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background with Twitch-inspired gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0E23"/>
+      <stop offset="50%" stop-color="#1f1f3a"/>
+      <stop offset="100%" stop-color="#9146FF"/>
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0F0FF"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9146FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#9146FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Subtle pattern overlay -->
+  <pattern id="dots" patternUnits="userSpaceOnUse" width="40" height="40">
+    <circle cx="20" cy="20" r="1" fill="#FFFFFF" opacity="0.1"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+  
+  <!-- Glow effects -->
+  <circle cx="200" cy="150" r="100" fill="url(#glowEffect)"/>
+  <circle cx="1000" cy="480" r="120" fill="url(#glowEffect)"/>
+  
+  <!-- Globe illustration (left side) -->
+  <g transform="translate(100, 150)">
+    <!-- Globe circle -->
+    <circle cx="100" cy="100" r="90" fill="#2563EB" stroke="#4A90E2" stroke-width="3"/>
+    
+    <!-- Continents -->
+    <path d="M40 70 Q55 60 75 65 Q95 70 105 85 Q100 100 90 110 Q75 115 60 105 Q45 95 40 80 Z" fill="#34D399" opacity="0.9"/>
+    <path d="M105 55 Q125 60 135 80 Q130 95 120 105 Q110 100 105 85 Q107 70 105 55 Z" fill="#34D399" opacity="0.9"/>
+    <path d="M45 120 Q65 115 80 125 Q85 140 70 150 Q55 145 45 135 Q43 128 45 120 Z" fill="#34D399" opacity="0.9"/>
+    
+    <!-- Global connection lines -->
+    <path d="M60 60 Q90 50 120 75" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M120 75 Q125 105 115 135" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M115 135 Q85 145 55 130" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.8"/>
+    
+    <!-- Connection dots -->
+    <circle cx="60" cy="60" r="4" fill="#FFD700"/>
+    <circle cx="120" cy="75" r="4" fill="#FFD700"/>
+    <circle cx="115" cy="135" r="4" fill="#FFD700"/>
+    <circle cx="55" cy="130" r="4" fill="#FFD700"/>
+  </g>
+  
+  <!-- Main title -->
+  <text x="600" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="url(#textGradient)">
+    Global Streamers
+  </text>
+  
+  <!-- Globe emoji and subtitle -->
+  <text x="600" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" fill="url(#accentGradient)">
+    🌍 Directory
+  </text>
+  
+  <!-- Tagline -->
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#FFFFFF" opacity="0.9">
+    Discover Amazing Content Creators Worldwide
+  </text>
+  
+  <!-- Feature highlights -->
+  <g transform="translate(400, 450)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#FFD700">
+      ✨ Gaming • VTubers • Esports • IRL • Variety
+    </text>
+    <text x="0" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#FFFFFF" opacity="0.8">
+      Ukraine • Spain • Germany • France • Brazil • Japan • Korea • USA • UK
+    </text>
+  </g>
+  
+  <!-- Twitch-style play button (right side) -->
+  <g transform="translate(950, 200)">
+    <circle cx="50" cy="50" r="45" fill="#9146FF" stroke="#FFFFFF" stroke-width="3"/>
+    <polygon points="35,30 35,70 70,50" fill="#FFFFFF"/>
+    
+    <!-- Streaming lines animation effect -->
+    <g opacity="0.6">
+      <line x1="10" y1="20" x2="90" y2="20" stroke="#FFD700" stroke-width="2"/>
+      <line x1="10" y1="35" x2="90" y2="35" stroke="#FFD700" stroke-width="2"/>
+      <line x1="10" y1="65" x2="90" y2="65" stroke="#FFD700" stroke-width="2"/>
+      <line x1="10" y1="80" x2="90" y2="80" stroke="#FFD700" stroke-width="2"/>
+    </g>
+  </g>
+  
+  <!-- Country flags representation -->
+  <g transform="translate(600, 520)">
+    <circle cx="-100" cy="0" r="15" fill="#0057B7"/>
+    <circle cx="-70" cy="0" r="15" fill="#C60B1E"/>
+    <circle cx="-40" cy="0" r="15" fill="#000000"/>
+    <circle cx="-10" cy="0" r="15" fill="#002395"/>
+    <circle cx="20" cy="0" r="15" fill="#009739"/>
+    <circle cx="50" cy="0" r="15" fill="#BC002D"/>
+    <circle cx="80" cy="0" r="15" fill="#003478"/>
+    <circle cx="110" cy="0" r="15" fill="#006AA7"/>
+  </g>
+  
+  <!-- Bottom branding -->
+  <text x="600" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" opacity="0.7">
+    the-streamers.com • Powered by Twitch Community
+  </text>
+</svg>
