@@ -8,6 +8,16 @@ import { Button } from "./components/ui/button";
 const fallbackAvatar = (name: string) =>
   `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&radius=50&backgroundType=gradientLinear`;
 
+// Utility to shuffle array randomly
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 interface Streamer {
   name: string;
   handle: string;
@@ -358,12 +368,15 @@ export default function StreamersDirectory() {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [activeCountries, setActiveCountries] = useState<string[]>([]);
 
-  const allTags = useMemo(() => [...new Set(STREAMERS.flatMap((s) => s.tags))].sort(), []);
-  const allCountries = useMemo(() => [...new Set(STREAMERS.map((s) => s.country))].sort(), []);
+  // Create a shuffled version of streamers on component mount
+  const shuffledStreamers = useMemo(() => shuffleArray(STREAMERS), []);
+
+  const allTags = useMemo(() => [...new Set(shuffledStreamers.flatMap((s) => s.tags))].sort(), [shuffledStreamers]);
+  const allCountries = useMemo(() => [...new Set(shuffledStreamers.map((s) => s.country))].sort(), [shuffledStreamers]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return STREAMERS.filter((s) => {
+    return shuffledStreamers.filter((s) => {
       const matchesQuery = !q ||
         s.name.toLowerCase().includes(q) ||
         s.handle.toLowerCase().includes(q) ||
@@ -373,7 +386,7 @@ export default function StreamersDirectory() {
       const matchesCountries = activeCountries.length === 0 || activeCountries.includes(s.country);
       return matchesQuery && matchesTags && matchesCountries;
     });
-  }, [query, activeTags, activeCountries]);
+  }, [query, activeTags, activeCountries, shuffledStreamers]);
 
   const toggleTag = (tag: string) => {
     setActiveTags((prev) =>
@@ -579,8 +592,8 @@ export default function StreamersDirectory() {
         <footer className="mt-10 text-xs text-slate-500" role="contentinfo">
           <p>Made with ❤️ using Copilot, 2025</p>
           <p className="mt-2">
-            <span>Total streamers: {STREAMERS.length}</span>
-            {filtered.length !== STREAMERS.length && (
+            <span>Total streamers: {shuffledStreamers.length}</span>
+            {filtered.length !== shuffledStreamers.length && (
               <span> • Found: {filtered.length}</span>
             )}
           </p>
