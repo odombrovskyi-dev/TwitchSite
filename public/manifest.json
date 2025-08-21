@@ -1,0 +1,26 @@
+{
+  "name": "Ukrainian Twitch Streamers Directory",
+  "short_name": "UA Streamers",
+  "description": "Discover Ukrainian Twitch streamers - search, filter, and explore the vibrant Ukrainian streaming community",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0057B7",
+  "orientation": "portrait-primary",
+  "categories": ["entertainment", "social", "games"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

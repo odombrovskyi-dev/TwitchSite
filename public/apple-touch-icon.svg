@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <!-- Clean background circle with Ukrainian blue -->
+  <circle cx="90" cy="90" r="85" fill="#0057B7" stroke="#ffffff" stroke-width="5"/>
+  
+  <!-- Clean play button/stream icon -->
+  <polygon points="65,50 65,130 125,90" fill="#FFD700"/>
+  
+  <!-- Clean accent dots -->
+  <circle cx="45" cy="45" r="6" fill="#FFD700"/>
+  <circle cx="135" cy="135" r="4" fill="#FFD700" opacity="0.8"/>
+</svg>
