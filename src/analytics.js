@@ -1,6 +1,6 @@
 // Analytics configuration using Vite environment variables
 const ENABLE_ANALYTICS = import.meta.env.VITE_ENABLE_ANALYTICS === 'true';
-const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID || "G-TNX797RKF7";
+const GA_TRACKING_ID = "G-TNX797RKF7";
 
 if (ENABLE_ANALYTICS) {
   // Load gtag script
