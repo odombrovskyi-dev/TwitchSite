@@ -186,19 +186,19 @@ const STREAMERS: Streamer[] = [
     handle: "thegrefg",
     tags: ["Variety", "Gaming", "Entertainment"],
     country: "Spain",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/thegrefg-profile_image-1dcf8a83b8c3a13a-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/1cba8fb8-1809-4985-8ae3-a08875918286-profile_image-70x70.png",
     description:
       "Spanish gaming sensation with massive audience. Variety gaming content and entertainment.",
   },
-  {
-    name: "ElRubius",
-    handle: "elrubius",
-    tags: ["Variety", "Gaming", "Just Chatting"],
-    country: "Spain",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/elrubius-profile_image-060d6765a40ab676-70x70.png",
-    description:
-      "Popular Spanish content creator known for variety gaming and entertaining chat interactions.",
-  },
+  // {
+  //   name: "ElRubius",
+  //   handle: "elrubius",
+  //   tags: ["Variety", "Gaming", "Just Chatting"],
+  //   country: "Spain",
+  //   avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/elrubius-profile_image-060d6765a40ab676-70x70.png",
+  //   description:
+  //     "Popular Spanish content creator known for variety gaming and entertaining chat interactions.",
+  // },
   
   // German Streamers
   {
@@ -206,36 +206,36 @@ const STREAMERS: Streamer[] = [
     handle: "montanablack88",
     tags: ["Variety", "Just Chatting", "Gaming"],
     country: "Germany",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/montanablack88-profile_image-7d0c4ae5b18a4c9e-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/6f36c08a-6f7d-40f1-a9e8-12eee2ff0f93-profile_image-70x70.png",
     description:
       "Germany's top streamer with variety content ranging from gaming to lifestyle discussions.",
   },
   {
-    name: "Knossi",
-    handle: "knossi",
+    name: "Eliasn97",
+    handle: "eliasn97",
     tags: ["Entertainment", "Gaming", "Variety"],
     country: "Germany",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/knossi-profile_image-665bb6b6b04c0e6c-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/4fb94c7a-b4c0-4ed1-9782-b630a59915d5-profile_image-70x70.png",
     description:
       "Entertaining German streamer known for his energetic personality and diverse content.",
   },
   
   // French Streamers
-  {
-    name: "Kameto",
-    handle: "kameto",
-    tags: ["Esports", "League of Legends", "Entertainment"],
-    country: "France",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/kameto-profile_image-8d5d5da4b7d4b4e3-70x70.png",
-    description:
-      "French esports personality and content creator focused on League of Legends and entertainment.",
-  },
+  // {
+  //   name: "Kameto",
+  //   handle: "kameto",
+  //   tags: ["Esports", "League of Legends", "Entertainment"],
+  //   country: "France",
+  //   avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/kameto-profile_image-8d5d5da4b7d4b4e3-70x70.png",
+  //   description:
+  //     "French esports personality and content creator focused on League of Legends and entertainment.",
+  // },
   {
     name: "Squeezie",
     handle: "squeezie",
     tags: ["Gaming", "Variety", "Entertainment"],
     country: "France",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/squeezie-profile_image-4d5b6c7a8e9f0123-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/1939615e-a34d-4fab-a035-8c3d8ffae278-profile_image-70x70.png",
     description:
       "Popular French content creator with gaming and variety entertainment streams.",
   },
@@ -246,7 +246,7 @@ const STREAMERS: Streamer[] = [
     handle: "cellbit",
     tags: ["Variety", "Gaming", "RPG"],
     country: "Brazil",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/cellbit-profile_image-1e2f3a4b5c6d7890-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/0595cdd0-65a7-4fa3-996d-323cf3a54be1-profile_image-70x70.png",
     description:
       "Brazilian streamer known for variety gaming content, RPG sessions, and engaging storytelling.",
   },
@@ -255,30 +255,30 @@ const STREAMERS: Streamer[] = [
     handle: "gaules",
     tags: ["CS2", "Esports", "Analysis"],
     country: "Brazil",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/gaules-profile_image-f1e2d3c4b5a69870-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/ea0fe422-84bd-4aee-9d10-fd4b0b3a7054-profile_image-70x70.png",
     description:
       "Legendary Brazilian CS commentator and streamer with expert game analysis and entertainment.",
   },
   
   // Japanese Streamers
-  {
-    name: "Kuzuha",
-    handle: "kuzuha",
-    tags: ["VTuber", "Gaming", "Variety"],
-    country: "Japan",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/kuzuha-profile_image-9a8b7c6d5e4f3210-70x70.png",
-    description:
-      "Popular Japanese VTuber known for gaming content and entertaining variety streams.",
-  },
-  {
-    name: "Shirakami Fubuki",
-    handle: "shirakamifubuki",
-    tags: ["VTuber", "Gaming", "Cozy"],
-    country: "Japan",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/shirakamifubuki-profile_image-2b3c4d5e6f7a8901-70x70.png",
-    description:
-      "Hololive VTuber from Japan with cozy gaming streams and engaging chat interactions.",
-  },
+  // {
+  //   name: "Kuzuha",
+  //   handle: "kuzuha",
+  //   tags: ["VTuber", "Gaming", "Variety"],
+  //   country: "Japan",
+  //   avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/kuzuha-profile_image-9a8b7c6d5e4f3210-70x70.png",
+  //   description:
+  //     "Popular Japanese VTuber known for gaming content and entertaining variety streams.",
+  // },
+  // {
+  //   name: "Shirakami Fubuki",
+  //   handle: "shirakamifubuki",
+  //   tags: ["VTuber", "Gaming", "Cozy"],
+  //   country: "Japan",
+  //   avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/shirakamifubuki-profile_image-2b3c4d5e6f7a8901-70x70.png",
+  //   description:
+  //     "Hololive VTuber from Japan with cozy gaming streams and engaging chat interactions.",
+  // },
   
   // Korean Streamers
   {
@@ -286,19 +286,19 @@ const STREAMERS: Streamer[] = [
     handle: "faker",
     tags: ["League of Legends", "Esports", "Pro Gaming"],
     country: "South Korea",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/faker-profile_image-3c4d5e6f7a8b9012-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/b2eb8a23-d6ad-45aa-bd8e-062133b64452-profile_image-70x70.png",
     description:
       "Legendary League of Legends pro player and world champion from South Korea.",
   },
-  {
-    name: "Lilpa",
-    handle: "lilpa",
-    tags: ["VTuber", "Gaming", "Variety"],
-    country: "South Korea",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/lilpa-profile_image-4d5e6f7a8b9c0123-70x70.png",
-    description:
-      "Popular Korean VTuber known for entertaining gaming content and variety streams.",
-  },
+  // {
+  //   name: "Lilpa",
+  //   handle: "lilpa",
+  //   tags: ["VTuber", "Gaming", "Variety"],
+  //   country: "South Korea",
+  //   avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/lilpa-profile_image-4d5e6f7a8b9c0123-70x70.png",
+  //   description:
+  //     "Popular Korean VTuber known for entertaining gaming content and variety streams.",
+  // },
   
   // Nordic Streamers
   {
@@ -306,7 +306,7 @@ const STREAMERS: Streamer[] = [
     handle: "anomaly",
     tags: ["CS2", "Gaming", "Entertainment"],
     country: "Sweden",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-5e6f7a8b9c0d1234-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/anomaly-profile_image-0be1a6abbc7a9f45-70x70.png",
     description:
       "Swedish CS2 content creator known for entertaining gameplay and energetic personality.",
   },
@@ -315,7 +315,7 @@ const STREAMERS: Streamer[] = [
     handle: "northernlion",
     tags: ["Variety", "Indie Games", "Talk"],
     country: "Canada",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/northernlion-profile_image-6f7a8b9c0d1e2345-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/6e593335-c2f3-4227-bc0d-34634472cf0f-profile_image-70x70.png",
     description:
       "Canadian variety streamer known for indie games, clever commentary, and talk shows.",
   },
@@ -326,7 +326,7 @@ const STREAMERS: Streamer[] = [
     handle: "shroud",
     tags: ["FPS", "Variety", "Pro Gaming"],
     country: "USA",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/shroud-profile_image-7a8b9c0d1e2f3456-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/7ed5e0c6-0191-4eef-8328-4af6e4ea5318-profile_image-70x70.png",
     description:
       "Former CS pro turned variety streamer, known for incredible FPS skills and chill vibes.",
   },
@@ -335,7 +335,7 @@ const STREAMERS: Streamer[] = [
     handle: "pokimane",
     tags: ["Variety", "Just Chatting", "Gaming"],
     country: "USA",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/pokimane-profile_image-8b9c0d1e2f3a4567-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/912232e8-9e53-4fb7-aac4-14aed07869ca-profile_image-70x70.png",
     description:
       "Popular variety streamer and content creator known for gaming and engaging chat interactions.",
   },
@@ -346,7 +346,7 @@ const STREAMERS: Streamer[] = [
     handle: "tommyinnit",
     tags: ["Minecraft", "Gaming", "Entertainment"],
     country: "United Kingdom",
-    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/tommyinnit-profile_image-9c0d1e2f3a4b5678-70x70.png",
+    avatar: "https://static-cdn.jtvnw.net/jtv_user_pictures/29dfd1e6-5723-4aac-9af5-62939ad1e959-profile_image-70x70.png",
     description:
       "Young British Minecraft content creator known for entertaining and energetic streams.",
   },
