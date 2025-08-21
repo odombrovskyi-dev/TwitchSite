@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>https://yourusername.github.io/TwitchSite/</loc>
+    <loc>https://the-streamers.com/</loc>
     <lastmod>2025-08-21</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://the-streamers.com/favicon.svg</image:loc>
+      <image:title>Global Streamers Directory Logo</image:title>
+      <image:caption>Global directory of Twitch streamers from around the world</image:caption>
+    </image:image>
   </url>
 </urlset>
