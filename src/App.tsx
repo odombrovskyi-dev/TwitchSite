@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Card, CardContent } from "./components/ui/card";
 import { Badge } from "./components/ui/badge";
 import { Input } from "./components/ui/input";
@@ -368,8 +368,34 @@ export default function StreamersDirectory() {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [activeCountries, setActiveCountries] = useState<string[]>([]);
 
-  // Create a shuffled version of streamers on component mount
-  const shuffledStreamers = useMemo(() => shuffleArray(STREAMERS), []);
+  // Initialize search from URL parameter
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    if (searchParam) {
+      setQuery(decodeURIComponent(searchParam));
+    }
+  }, []);
+
+  // Update URL when search changes
+  const updateSearchParam = (newQuery: string) => {
+    setQuery(newQuery);
+    const url = new URL(window.location.href);
+    if (newQuery.trim()) {
+      url.searchParams.set('search', encodeURIComponent(newQuery));
+    } else {
+      url.searchParams.delete('search');
+    }
+    // Update URL without page reload
+    window.history.replaceState({}, '', url.toString());
+  };
+
+  // Create a shuffled version of streamers on component mount, but not if search param is present
+  const shuffledStreamers = useMemo(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasSearchParam = urlParams.has('search');
+    return hasSearchParam ? STREAMERS : shuffleArray(STREAMERS);
+  }, []);
 
   const allTags = useMemo(() => [...new Set(shuffledStreamers.flatMap((s) => s.tags))].sort(), [shuffledStreamers]);
   const allCountries = useMemo(() => [...new Set(shuffledStreamers.map((s) => s.country))].sort(), [shuffledStreamers]);
@@ -437,7 +463,7 @@ export default function StreamersDirectory() {
                   placeholder="Search by name, tag, or description"
                   className="pl-9"
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(e) => updateSearchParam(e.target.value)}
                   aria-label="Search global Twitch streamers"
                 />
               </div>
