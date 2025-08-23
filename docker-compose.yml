@@ -1,0 +1,11 @@
+services:
+  twitchsite:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: sh -c "sleep 1000000000"

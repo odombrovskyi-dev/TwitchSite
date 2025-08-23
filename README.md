@@ -39,7 +39,7 @@ You need to have Node.js installed on your system:
    npm run dev
    ```
 
-3. **Open your browser** and navigate to `http://localhost:5173`
+3. **Open your browser** and navigate to `http://localhost:3000`
 
 ## Available Scripts
 
