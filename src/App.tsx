@@ -59,6 +59,7 @@ export default function StreamersDirectory() {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [activeCountries, setActiveCountries] = useState<string[]>([]);
   const [liveHandles, setLiveHandles] = useState<Set<string>>(new Set());
+  const [onlyLive, setOnlyLive] = useState(false);
 
   // Initialize search from URL parameter
   useEffect(() => {
@@ -116,6 +117,10 @@ export default function StreamersDirectory() {
 
   const allTags = useMemo(() => [...new Set(shuffledStreamers.flatMap((s) => s.tags))].sort(), [shuffledStreamers]);
   const allCountries = useMemo(() => [...new Set(shuffledStreamers.map((s) => s.country))].sort(), [shuffledStreamers]);
+  const liveCount = useMemo(
+    () => shuffledStreamers.filter((s) => liveHandles.has(s.handle)).length,
+    [shuffledStreamers, liveHandles]
+  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -127,9 +132,10 @@ export default function StreamersDirectory() {
         s.tags.some((t) => t.toLowerCase().includes(q));
       const matchesTags = activeTags.length === 0 || activeTags.every((t) => s.tags.includes(t));
       const matchesCountries = activeCountries.length === 0 || activeCountries.includes(s.country);
-      return matchesQuery && matchesTags && matchesCountries;
+      const matchesLive = !onlyLive || liveHandles.has(s.handle);
+      return matchesQuery && matchesTags && matchesCountries && matchesLive;
     });
-  }, [query, activeTags, activeCountries, shuffledStreamers]);
+  }, [query, activeTags, activeCountries, onlyLive, liveHandles, shuffledStreamers]);
 
   const toggleTag = (tag: string) => {
     setActiveTags((prev) =>
@@ -188,6 +194,21 @@ export default function StreamersDirectory() {
           </header>
 
           <nav className="mb-6 space-y-4" aria-label="Filter streamers">
+            {/* Live Filter */}
+            <div>
+              <Badge
+                onClick={() => setOnlyLive((v) => !v)}
+                aria-pressed={onlyLive}
+                className={`cursor-pointer select-none transition ${
+                  onlyLive
+                    ? "bg-red-600 text-white hover:bg-red-700"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                }`}
+              >
+                🔴 Live now {liveCount > 0 && `(${liveCount})`}
+              </Badge>
+            </div>
+
             {/* Tags Filter */}
             <div>
               <div className="flex items-center gap-2 mb-3">
@@ -237,15 +258,16 @@ export default function StreamersDirectory() {
             </div>
 
             {/* Clear Filters */}
-            {(activeTags.length > 0 || activeCountries.length > 0) && (
+            {(activeTags.length > 0 || activeCountries.length > 0 || onlyLive) && (
               <div className="pt-2">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   onClick={() => {
                     setActiveTags([]);
                     setActiveCountries([]);
-                  }} 
+                    setOnlyLive(false);
+                  }}
                   aria-label="Clear all filters"
                 >
                   Clear all filters
