@@ -21,10 +21,11 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path mapping */
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "noUncheckedSideEffectImports": false,
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
