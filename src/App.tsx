@@ -277,6 +277,7 @@ export default function StreamersDirectory() {
           </nav>
 
           <main className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="main" aria-label="Global Twitch streamers directory">
+            <h2 className="sr-only">Streamer directory</h2>
             {filtered.map((s, idx) => (
               <article
                 key={s.handle}
