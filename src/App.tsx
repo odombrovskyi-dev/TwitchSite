@@ -91,11 +91,24 @@ export default function StreamersDirectory() {
       }
     };
 
-    fetchLiveStatus();
+    // Defer the initial fetch slightly so it doesn't compete with the
+    // JS/CSS bundle for bandwidth during the most contended part of the
+    // initial load. A short timeout (well before typical LCP) keeps the
+    // "Live now" badges from visibly lagging for real users.
+    let idleHandle: number | undefined;
+    let timeoutHandle: number | undefined;
+    if (typeof window.requestIdleCallback === "function") {
+      idleHandle = window.requestIdleCallback(fetchLiveStatus, { timeout: 1500 });
+    } else {
+      timeoutHandle = window.setTimeout(fetchLiveStatus, 500);
+    }
+
     const interval = setInterval(fetchLiveStatus, LIVE_STATUS_POLL_INTERVAL_MS);
     return () => {
       cancelled = true;
       clearInterval(interval);
+      if (idleHandle !== undefined) window.cancelIdleCallback(idleHandle);
+      if (timeoutHandle !== undefined) window.clearTimeout(timeoutHandle);
     };
   }, []);
 
