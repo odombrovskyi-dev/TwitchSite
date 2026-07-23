@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     
-    <!-- Preconnect to origins used for streamer avatars and live status -->
-    <link rel="preconnect" href="https://static-cdn.jtvnw.net" />
+    <!-- Preconnect to the live-status origin. Avatars are now served as
+         local first-party assets (see scripts/update-avatars.mjs), so
+         static-cdn.jtvnw.net is only a rare fallback and no longer worth
+         a preconnect. -->
     <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
 
     <!-- Favicon and Icons -->
