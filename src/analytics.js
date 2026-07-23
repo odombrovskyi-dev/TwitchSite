@@ -19,12 +19,23 @@ if (ENABLE_ANALYTICS) {
     console.log(`🔍 Google Analytics loaded: ${GA_TRACKING_ID}`);
   };
 
-  // Defer GTM until the browser is idle so it doesn't compete with
-  // initial render/main-thread work on first load.
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(loadGtag, { timeout: 4000 });
+  // Defer GTM until after the page has fully loaded, then wait for an
+  // idle moment. A bare requestIdleCallback with a multi-second timeout
+  // can get force-fired mid-render under CPU/network throttling (the
+  // browser never reports idle in time), landing right on top of LCP -
+  // waiting for `load` first guarantees GTM never competes with it.
+  const scheduleLoadGtag = () => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(loadGtag, { timeout: 2000 });
+    } else {
+      window.setTimeout(loadGtag, 1000);
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    scheduleLoadGtag();
   } else {
-    window.setTimeout(loadGtag, 2000);
+    window.addEventListener('load', scheduleLoadGtag, { once: true });
   }
 } else {
   console.log('🚫 Google Analytics disabled via environment variables');
