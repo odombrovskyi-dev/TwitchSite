@@ -58,12 +58,19 @@ const getCountryFlag = (country: string): string => {
 
 const STREAMERS: Streamer[] = streamersData;
 
+// Cards rendered on the very first paint, before the rest are revealed.
+// React commits the header text and the card grid in the same pass, so
+// capping the initial batch keeps the browser from having to lay out and
+// style all ~1,200 DOM nodes of the full grid before it can paint LCP.
+const INITIAL_VISIBLE_COUNT = 8;
+
 export default function StreamersDirectory() {
   const [query, setQuery] = useState("");
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [activeCountries, setActiveCountries] = useState<string[]>([]);
   const [liveHandles, setLiveHandles] = useState<Set<string>>(new Set());
   const [onlyLive, setOnlyLive] = useState(false);
+  const [revealAll, setRevealAll] = useState(false);
 
   // Initialize search from URL parameter
   useEffect(() => {
@@ -71,6 +78,20 @@ export default function StreamersDirectory() {
     const searchParam = urlParams.get('search');
     if (searchParam) {
       setQuery(decodeURIComponent(searchParam));
+    }
+  }, []);
+
+  // Reveal the rest of the grid right after first paint. This only ever
+  // fires once - after that every filter/search change already renders
+  // the full result set immediately.
+  useEffect(() => {
+    const reveal = () => setRevealAll(true);
+    if (typeof window.requestIdleCallback === "function") {
+      const handle = window.requestIdleCallback(reveal, { timeout: 300 });
+      return () => window.cancelIdleCallback(handle);
+    } else {
+      const handle = window.setTimeout(reveal, 0);
+      return () => window.clearTimeout(handle);
     }
   }, []);
 
@@ -153,6 +174,8 @@ export default function StreamersDirectory() {
       return matchesQuery && matchesTags && matchesCountries && matchesLive;
     });
   }, [query, activeTags, activeCountries, onlyLive, liveHandles, shuffledStreamers]);
+
+  const visibleStreamers = revealAll ? filtered : filtered.slice(0, INITIAL_VISIBLE_COUNT);
 
   const toggleTag = (tag: string) => {
     setActiveTags((prev) =>
@@ -295,7 +318,7 @@ export default function StreamersDirectory() {
 
           <main className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="main" aria-label="Global Twitch streamers directory">
             <h2 className="sr-only">Streamer directory</h2>
-            {filtered.map((s, idx) => (
+            {visibleStreamers.map((s, idx) => (
               <article
                 key={s.handle}
                 className="opacity-0 animate-fadeIn"
