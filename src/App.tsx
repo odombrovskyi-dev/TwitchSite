@@ -9,7 +9,11 @@ const LIVE_STATUS_URL =
   "https://raw.githubusercontent.com/odombrovskyi-dev/TwitchSite/main/public/live-status.json";
 const LIVE_STATUS_POLL_INTERVAL_MS = 60_000;
 
-// Utility to build a safe image URL with fallback
+// Pre-optimized local copy of the streamer's Twitch avatar (refreshed daily
+// by scripts/update-avatars.mjs). Falls back to the original Twitch CDN URL,
+// then to a generated placeholder, if it's missing or fails to load.
+const localAvatar = (handle: string) => `/avatars/${handle}.webp`;
+
 const fallbackAvatar = (name: string) =>
   `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}&radius=50&backgroundType=gradientLinear`;
 
@@ -298,9 +302,16 @@ export default function StreamersDirectory() {
                   <div className="flex items-center gap-3">
                     <div className="relative shrink-0">
                       <img
-                        src={s.avatar}
+                        src={localAvatar(s.handle)}
                         onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = fallbackAvatar(s.name);
+                          const img = e.currentTarget as HTMLImageElement;
+                          // Local WebP missing (not converted yet) -> try the
+                          // original Twitch CDN URL -> generated placeholder.
+                          if (img.src.endsWith(".webp")) {
+                            img.src = s.avatar;
+                          } else {
+                            img.src = fallbackAvatar(s.name);
+                          }
                         }}
                         alt={`${s.name} avatar`}
                         className="h-12 w-12 rounded-full object-cover ring-1 ring-slate-200"
